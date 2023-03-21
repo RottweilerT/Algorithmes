@@ -1,0 +1,20 @@
+# define the size of the chess board
+board_size = 8
+
+# create an empty board
+board = []
+
+# create the rows of the board
+for i in range(board_size):
+    row = []
+    for j in range(board_size):
+        # fill the rows with alternating black and white squares
+        if (i + j) % 2 == 0:
+            row.append(' ')
+        else:
+            row.append('#')
+    board.append(row)
+
+# print the board
+for row in board:
+    print(' '.join(row))
